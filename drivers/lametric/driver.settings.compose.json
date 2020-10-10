@@ -1,0 +1,10 @@
+[
+  {
+    "$extends": "ip_address",
+    "id": "ip_address"
+  },
+  {
+    "$extends": "poll_interval",
+    "id": "poll_interval"
+  }
+]

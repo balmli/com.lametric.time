@@ -1,0 +1,13 @@
+{
+  "id": "prev_widget",
+  "title": {
+    "en": "Show previous widget"
+  },
+  "args": [
+    {
+      "name": "device",
+      "type": "device",
+      "filter": "driver_id=lametric"
+    }
+  ]
+}

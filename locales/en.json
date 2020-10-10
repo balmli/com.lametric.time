@@ -1,0 +1,12 @@
+{
+  "errors": {
+    "next_app": "Unable to switch to the next app (__statusCode__ __message__)",
+    "prev_app": "Unable to switch to the previous app (__statusCode__ __message__)",
+    "show_widget": "Unable to show widget: __widgetName__ (__statusCode__ __statusMessage__)",
+    "send_notification": "Unable to send a new notification to the device (__statusCode__ __statusMessage__)",
+    "clear_notifications": "Unable to clear notifications (__statusCode__ __statusMessage__)",
+    "update_display_state": "Unable to update display state (__statusCode__ __statusMessage__)",
+    "get_volume_state": "Unable to get volume state (__statusCode__ __statusMessage__)",
+    "update_volume_state": "Unable to update volume (__statusCode__ __statusMessage__)"
+  }
+}

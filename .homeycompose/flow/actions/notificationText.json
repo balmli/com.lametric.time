@@ -1,0 +1,74 @@
+{
+  "id": "notificationText",
+  "title": {
+    "en": "Notification"
+  },
+  "args": [
+    {
+      "name": "device",
+      "type": "device",
+      "filter": "driver_id=lametric"
+    },
+    {
+      "name": "priority",
+      "title": {
+        "en": "Priority"
+      },
+      "type": "dropdown",
+      "values": [
+        {
+          "id": "info",
+          "label": {
+            "en": "Info"
+          }
+        },
+        {
+          "id": "warning",
+          "label": {
+            "en": "Warning"
+          }
+        },
+        {
+          "id": "critical",
+          "label": {
+            "en": "Critical"
+          }
+        }
+      ]
+    },
+    {
+      "name": "icontype",
+      "title": {
+        "en": "Icon type"
+      },
+      "type": "dropdown",
+      "values": [
+        {
+          "id": "none",
+          "label": {
+            "en": "None"
+          }
+        },
+        {
+          "id": "info",
+          "label": {
+            "en": "Info"
+          }
+        },
+        {
+          "id": "alert",
+          "label": {
+            "en": "Alert"
+          }
+        }
+      ]
+    },
+    {
+      "name": "text",
+      "type": "text",
+      "placeholder": {
+        "en": "Text"
+      }
+    }
+  ]
+}

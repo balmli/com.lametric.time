@@ -1,0 +1,52 @@
+{
+  "id": "com.lametric.time",
+  "version": "0.0.1",
+  "compatibility": ">=5.0.0",
+  "sdk": 3,
+  "brandColor": "#25b0f8",
+  "name": {
+    "en": "Lametric"
+  },
+  "description": {
+    "en": "Control your Lametric Time"
+  },
+  "category": [
+    "internet"
+  ],
+  "tags": {
+    "en": [
+      "influxdb",
+      "metrics",
+      "grafana"
+    ]
+  },
+  "images": {
+    "large": "/assets/images/large.png",
+    "small": "/assets/images/small.png"
+  },
+  "permissions": [],
+  "author": {
+    "name": "Bjørnar Almli",
+    "email": "bjornar.almli@gmail.com"
+  },
+  "contributors": {
+    "developers": [
+      {
+        "name": "Bjørnar Almli",
+        "email": "bjornar.almli@gmail.com"
+      }
+    ]
+  },
+  "contributing": {
+    "donate": {
+      "paypal": {
+        "username": "bjornaralmli"
+      }
+    }
+  },
+  "bugs": {
+    "url": "https://github.com/balmli/com.lametric.time/issues"
+  },
+  "homeyCommunityTopicId": 0,
+  "source": "https://github.com/balmli/com.lametric.time"
+}

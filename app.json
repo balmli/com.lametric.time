@@ -1,0 +1,628 @@
+{
+  "id": "com.lametric.time",
+  "version": "0.0.1",
+  "compatibility": ">=5.0.0",
+  "sdk": 3,
+  "brandColor": "#25b0f8",
+  "name": {
+    "en": "Lametric"
+  },
+  "description": {
+    "en": "Control your Lametric Time"
+  },
+  "category": [
+    "internet"
+  ],
+  "tags": {
+    "en": [
+      "influxdb",
+      "metrics",
+      "grafana"
+    ]
+  },
+  "images": {
+    "large": "/assets/images/large.png",
+    "small": "/assets/images/small.png"
+  },
+  "permissions": [],
+  "author": {
+    "name": "Bjørnar Almli",
+    "email": "bjornar.almli@gmail.com"
+  },
+  "contributors": {
+    "developers": [
+      {
+        "name": "Bjørnar Almli",
+        "email": "bjornar.almli@gmail.com"
+      }
+    ]
+  },
+  "contributing": {
+    "donate": {
+      "paypal": {
+        "username": "bjornaralmli"
+      }
+    }
+  },
+  "bugs": {
+    "url": "https://github.com/balmli/com.lametric.time/issues"
+  },
+  "homeyCommunityTopicId": 0,
+  "source": "https://github.com/balmli/com.lametric.time",
+  "flow": {
+    "actions": [
+      {
+        "id": "api_version",
+        "title": {
+          "en": "Get API Version"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=lametric"
+          }
+        ]
+      },
+      {
+        "id": "audio_state",
+        "title": {
+          "en": "Get Audio State"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=lametric"
+          }
+        ]
+      },
+      {
+        "id": "clear_notifications",
+        "title": {
+          "en": "Clear notifications"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=lametric"
+          }
+        ]
+      },
+      {
+        "id": "device_state",
+        "title": {
+          "en": "Get Device State"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=lametric"
+          }
+        ]
+      },
+      {
+        "id": "next_widget",
+        "title": {
+          "en": "Show next widget"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=lametric"
+          }
+        ]
+      },
+      {
+        "id": "notificationText",
+        "title": {
+          "en": "Notification"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=lametric"
+          },
+          {
+            "name": "priority",
+            "title": {
+              "en": "Priority"
+            },
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "info",
+                "label": {
+                  "en": "Info"
+                }
+              },
+              {
+                "id": "warning",
+                "label": {
+                  "en": "Warning"
+                }
+              },
+              {
+                "id": "critical",
+                "label": {
+                  "en": "Critical"
+                }
+              }
+            ]
+          },
+          {
+            "name": "icontype",
+            "title": {
+              "en": "Icon type"
+            },
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "none",
+                "label": {
+                  "en": "None"
+                }
+              },
+              {
+                "id": "info",
+                "label": {
+                  "en": "Info"
+                }
+              },
+              {
+                "id": "alert",
+                "label": {
+                  "en": "Alert"
+                }
+              }
+            ]
+          },
+          {
+            "name": "text",
+            "type": "text",
+            "placeholder": {
+              "en": "Text"
+            }
+          }
+        ]
+      },
+      {
+        "id": "notificationTextIcon",
+        "title": {
+          "en": "Notification (icon)"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=lametric"
+          },
+          {
+            "name": "priority",
+            "title": {
+              "en": "Priority"
+            },
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "info",
+                "label": {
+                  "en": "Info"
+                }
+              },
+              {
+                "id": "warning",
+                "label": {
+                  "en": "Warning"
+                }
+              },
+              {
+                "id": "critical",
+                "label": {
+                  "en": "Critical"
+                }
+              }
+            ]
+          },
+          {
+            "name": "icontype",
+            "title": {
+              "en": "Icon type"
+            },
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "none",
+                "label": {
+                  "en": "None"
+                }
+              },
+              {
+                "id": "info",
+                "label": {
+                  "en": "Info"
+                }
+              },
+              {
+                "id": "alert",
+                "label": {
+                  "en": "Alert"
+                }
+              }
+            ]
+          },
+          {
+            "name": "text",
+            "type": "text",
+            "placeholder": {
+              "en": "Text"
+            }
+          },
+          {
+            "name": "icon",
+            "title": {
+              "en": "Icon"
+            },
+            "type": "autocomplete",
+            "placeholder": {
+              "en": "Homey"
+            }
+          }
+        ]
+      },
+      {
+        "id": "notificationTextIconSound",
+        "title": {
+          "en": "Notification (icon and sound)"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=lametric"
+          },
+          {
+            "name": "priority",
+            "title": {
+              "en": "Priority"
+            },
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "info",
+                "label": {
+                  "en": "Info"
+                }
+              },
+              {
+                "id": "warning",
+                "label": {
+                  "en": "Warning"
+                }
+              },
+              {
+                "id": "critical",
+                "label": {
+                  "en": "Critical"
+                }
+              }
+            ]
+          },
+          {
+            "name": "icontype",
+            "title": {
+              "en": "Icon type"
+            },
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "none",
+                "label": {
+                  "en": "None"
+                }
+              },
+              {
+                "id": "info",
+                "label": {
+                  "en": "Info"
+                }
+              },
+              {
+                "id": "alert",
+                "label": {
+                  "en": "Alert"
+                }
+              }
+            ]
+          },
+          {
+            "name": "text",
+            "type": "text",
+            "placeholder": {
+              "en": "Text"
+            }
+          },
+          {
+            "name": "icon",
+            "title": {
+              "en": "Icon"
+            },
+            "type": "autocomplete",
+            "placeholder": {
+              "en": "Homey"
+            }
+          },
+          {
+            "name": "sound",
+            "title": {
+              "en": "Sound"
+            },
+            "type": "autocomplete",
+            "placeholder": {
+              "en": "Sound"
+            }
+          },
+          {
+            "name": "repeat",
+            "title": {
+              "en": "Repeat"
+            },
+            "type": "range",
+            "min": 1,
+            "max": 50,
+            "step": 1
+          }
+        ]
+      },
+      {
+        "id": "notificationTextSound",
+        "title": {
+          "en": "Notification (sound)"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=lametric"
+          },
+          {
+            "name": "priority",
+            "title": {
+              "en": "Priority"
+            },
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "info",
+                "label": {
+                  "en": "Info"
+                }
+              },
+              {
+                "id": "warning",
+                "label": {
+                  "en": "Warning"
+                }
+              },
+              {
+                "id": "critical",
+                "label": {
+                  "en": "Critical"
+                }
+              }
+            ]
+          },
+          {
+            "name": "icontype",
+            "title": {
+              "en": "Icon type"
+            },
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "none",
+                "label": {
+                  "en": "None"
+                }
+              },
+              {
+                "id": "info",
+                "label": {
+                  "en": "Info"
+                }
+              },
+              {
+                "id": "alert",
+                "label": {
+                  "en": "Alert"
+                }
+              }
+            ]
+          },
+          {
+            "name": "text",
+            "type": "text",
+            "placeholder": {
+              "en": "Text"
+            }
+          },
+          {
+            "name": "sound",
+            "title": {
+              "en": "Sound"
+            },
+            "type": "autocomplete",
+            "placeholder": {
+              "en": "Sound"
+            }
+          },
+          {
+            "name": "repeat",
+            "title": {
+              "en": "Repeat"
+            },
+            "type": "range",
+            "min": 1,
+            "max": 50,
+            "step": 1
+          }
+        ]
+      },
+      {
+        "id": "prev_widget",
+        "title": {
+          "en": "Show previous widget"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=lametric"
+          }
+        ]
+      },
+      {
+        "id": "set_brightness",
+        "title": {
+          "en": "Set brightness"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=lametric"
+          },
+          {
+            "name": "brightness",
+            "type": "range",
+            "min": 0,
+            "max": 100,
+            "step": 1,
+            "label": "%"
+          }
+        ]
+      },
+      {
+        "id": "set_brightness_auto",
+        "title": {
+          "en": "Set brightness to Auto"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=lametric"
+          }
+        ]
+      },
+      {
+        "id": "show_widget",
+        "title": {
+          "en": "Show widget"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=lametric"
+          },
+          {
+            "name": "widget",
+            "type": "autocomplete",
+            "placeholder": {
+              "en": "Select widget"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "drivers": [
+    {
+      "icon": "/drivers/lametric/assets/icon.svg",
+      "images": {
+        "large": "/drivers/lametric/assets/images/large.png",
+        "small": "/drivers/lametric/assets/images/small.png"
+      },
+      "id": "lametric",
+      "name": {
+        "en": "Lametric Time"
+      },
+      "class": "other",
+      "capabilities": [
+        "volume_set"
+      ],
+      "discovery": "lametric_time",
+      "pair": [
+        {
+          "id": "login_oauth2",
+          "template": "login_oauth2"
+        },
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices"
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices"
+        }
+      ],
+      "repair": [
+        {
+          "id": "login_oauth2",
+          "template": "login_oauth2"
+        }
+      ],
+      "settings": [
+        {
+          "id": "ip_address",
+          "type": "text",
+          "label": {
+            "en": "IP address"
+          },
+          "value": "0.0.0.0"
+        },
+        {
+          "id": "poll_interval",
+          "type": "number",
+          "label": {
+            "en": "Polling interval"
+          },
+          "value": 30,
+          "min": 15,
+          "max": 300,
+          "hint": {
+            "en": "Polling interval (seconds)"
+          }
+        }
+      ]
+    }
+  ],
+  "discovery": {
+    "lametric_time": {
+      "type": "ssdp",
+      "ssdp": {
+        "search": "urn:schemas-upnp-org:device:LaMetric:1"
+      },
+      "id": "{{headers.usn}}",
+      "conditions": [
+        [
+          {
+            "field": "headers.st",
+            "match": {
+              "type": "string",
+              "value": "urn:schemas-upnp-org:device:LaMetric:1"
+            }
+          }
+        ]
+      ]
+    }
+  }
+}
