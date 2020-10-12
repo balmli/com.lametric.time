@@ -6,5 +6,9 @@
   {
     "$extends": "poll_interval",
     "id": "poll_interval"
+  },
+  {
+    "$extends": "lifetime",
+    "id": "lifetime"
   }
 ]

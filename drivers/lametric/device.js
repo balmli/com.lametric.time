@@ -57,7 +57,8 @@ module.exports = class LametricDevice extends OAuth2Device {
     }
 
     async onSettings(event) {
-        if (event.changedKeys.includes('ip_address')) {
+        if (event.changedKeys.includes('ip_address') ||
+            event.changedKeys.includes('lifetime')) {
             delete this.lametricClient;
         }
     }
@@ -67,6 +68,7 @@ module.exports = class LametricDevice extends OAuth2Device {
             this.lametricClient = new LametricClient({
                 ip: this.getSetting('ip_address'),
                 api_key: this.getStoreValue('api_key'),
+                lifetime: this.getSetting('lifetime'),
                 log: this.log,
                 i18n: this.homey.i18n
             });

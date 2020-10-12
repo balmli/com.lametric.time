@@ -562,6 +562,19 @@
           "hint": {
             "en": "Polling interval (seconds)"
           }
+        },
+        {
+          "id": "lifetime",
+          "type": "number",
+          "label": {
+            "en": "Lifetime (seconds)"
+          },
+          "value": 120,
+          "min": 5,
+          "max": 900,
+          "hint": {
+            "en": "The time notification lives in queue to be displayed in seconds. "
+          }
         }
       ]
     }
