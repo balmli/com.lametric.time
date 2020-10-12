@@ -52,6 +52,70 @@
   "flow": {
     "actions": [
       {
+        "id": "alarm_disable",
+        "title": {
+          "en": "Disable the alarm clock"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=lametric"
+          }
+        ]
+      },
+      {
+        "id": "alarm_enable",
+        "title": {
+          "en": "Enable the alarm clock"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=lametric"
+          }
+        ]
+      },
+      {
+        "id": "alarm_set",
+        "title": {
+          "en": "Set the alarm clock"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=lametric"
+          },
+          {
+            "name": "time",
+            "type": "time",
+            "placeholder": {
+              "en": "Time"
+            }
+          },
+          {
+            "name": "radio",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "true",
+                "label": {
+                  "en": "Radio"
+                }
+              },
+              {
+                "id": "false",
+                "label": {
+                  "en": "Buzzer"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
         "id": "clear_notification_queue",
         "title": {
           "en": "Clear the notification queue"

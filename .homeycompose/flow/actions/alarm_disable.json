@@ -1,0 +1,12 @@
+{ "id": "alarm_disable",
+  "title": {
+    "en": "Disable the alarm clock"
+  },
+  "args": [
+    {
+      "name": "device",
+      "type": "device",
+      "filter": "driver_id=lametric"
+    }
+  ]
+}

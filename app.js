@@ -27,6 +27,10 @@ module.exports = class LametricTimeApp extends OAuth2App {
                 return results.filter(result => result.name.toLowerCase().includes(query.toLowerCase()));
             });
 
+        this.homey.flow.getActionCard('alarm_set').registerRunListener((args, state) => args.device.getClient().alarmSet(args.time, args.radio));
+        this.homey.flow.getActionCard('alarm_enable').registerRunListener((args, state) => args.device.getClient().alarmEnable());
+        this.homey.flow.getActionCard('alarm_disable').registerRunListener((args, state) => args.device.getClient().alarmDisable());
+
         this.homey.flow.getActionCard('notificationText')
             .registerRunListener((args, state) => args.device.getClient().sendNotification(args));
 
