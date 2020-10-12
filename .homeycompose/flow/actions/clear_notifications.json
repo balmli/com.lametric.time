@@ -1,7 +1,7 @@
 {
-  "id": "clear_notifications",
+  "id": "clear_notification_queue",
   "title": {
-    "en": "Clear notifications"
+    "en": "Clear the notification queue"
   },
   "args": [
     {

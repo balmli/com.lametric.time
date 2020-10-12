@@ -20,9 +20,6 @@ module.exports = class LametricTimeApp extends OAuth2App {
     }
 
     async _initFlows() {
-        this.homey.flow.getActionCard('api_version').registerRunListener((args, state) => args.device.getClient().apiVersion());
-        this.homey.flow.getActionCard('device_state').registerRunListener((args, state) => args.device.getClient().deviceState());
-
         this.homey.flow.getActionCard('show_widget')
             .registerRunListener((args, state) => args.device.getClient().showWidget(args.widget))
             .registerArgumentAutocompleteListener('widget', async (query, args) => {
@@ -46,10 +43,9 @@ module.exports = class LametricTimeApp extends OAuth2App {
             .registerArgumentAutocompleteListener('icon', async (query, args) => args.device.getIcons().filter(result => result.name.toLowerCase().includes(query.toLowerCase())))
             .registerArgumentAutocompleteListener('sound', async (query, args) => SOUNDS.filter(result => result.name.toLowerCase().includes(query.toLowerCase())));
 
-        this.homey.flow.getActionCard('clear_notifications').registerRunListener((args, state) => args.device.getClient().clearNotifications());
+        this.homey.flow.getActionCard('clear_notification_queue').registerRunListener((args, state) => args.device.getClient().clearNotifications());
         this.homey.flow.getActionCard('next_widget').registerRunListener((args, state) => args.device.getClient().next());
         this.homey.flow.getActionCard('prev_widget').registerRunListener((args, state) => args.device.getClient().prev());
-        this.homey.flow.getActionCard('device_state').registerRunListener((args, state) => args.device.getClient().deviceState());
         this.homey.flow.getActionCard('set_brightness').registerRunListener((args, state) => args.device.getClient().updateDisplayState(args.brightness, 'manual'));
         this.homey.flow.getActionCard('set_brightness_auto').registerRunListener((args, state) => args.device.getClient().updateDisplayState(100, 'auto'));
     }

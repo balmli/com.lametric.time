@@ -1,6 +1,6 @@
 {
   "id": "com.lametric.time",
-  "version": "0.0.1",
+  "version": "0.9.0",
   "compatibility": ">=5.0.0",
   "sdk": 3,
   "brandColor": "#25b0f8",
@@ -52,48 +52,9 @@
   "flow": {
     "actions": [
       {
-        "id": "api_version",
+        "id": "clear_notification_queue",
         "title": {
-          "en": "Get API Version"
-        },
-        "args": [
-          {
-            "name": "device",
-            "type": "device",
-            "filter": "driver_id=lametric"
-          }
-        ]
-      },
-      {
-        "id": "audio_state",
-        "title": {
-          "en": "Get Audio State"
-        },
-        "args": [
-          {
-            "name": "device",
-            "type": "device",
-            "filter": "driver_id=lametric"
-          }
-        ]
-      },
-      {
-        "id": "clear_notifications",
-        "title": {
-          "en": "Clear notifications"
-        },
-        "args": [
-          {
-            "name": "device",
-            "type": "device",
-            "filter": "driver_id=lametric"
-          }
-        ]
-      },
-      {
-        "id": "device_state",
-        "title": {
-          "en": "Get Device State"
+          "en": "Clear the notification queue"
         },
         "args": [
           {
