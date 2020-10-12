@@ -3,6 +3,7 @@
     "next_app": "Unable to switch to the next app (__statusCode__ __message__)",
     "prev_app": "Unable to switch to the previous app (__statusCode__ __message__)",
     "show_widget": "Unable to show widget: __widgetName__ (__statusCode__ __statusMessage__)",
+    "no_such_widget": "Unable to show widget: __appId__",
     "app_action": "Unable to interact with the widget (__statusCode__ __statusMessage__)",
     "send_notification": "Unable to send a new notification to the device (__statusCode__ __statusMessage__)",
     "clear_notification_queue": "Unable to clear notifications (__statusCode__ __statusMessage__)",

@@ -5,10 +5,10 @@
   "sdk": 3,
   "brandColor": "#25b0f8",
   "name": {
-    "en": "Lametric"
+    "en": "LaMetric"
   },
   "description": {
-    "en": "Control your Lametric Time"
+    "en": "Control your LaMetric Time"
   },
   "category": [
     "internet"
@@ -52,28 +52,33 @@
   "flow": {
     "actions": [
       {
-        "id": "alarm_disable",
-        "title": {
-          "en": "Disable the alarm clock"
-        },
-        "args": [
-          {
-            "name": "device",
-            "type": "device",
-            "filter": "driver_id=lametric"
-          }
-        ]
-      },
-      {
         "id": "alarm_enable",
         "title": {
-          "en": "Enable the alarm clock"
+          "en": "Enable / disable the alarm clock"
         },
         "args": [
           {
             "name": "device",
             "type": "device",
             "filter": "driver_id=lametric"
+          },
+          {
+            "name": "enabled",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "true",
+                "label": {
+                  "en": "Enable"
+                }
+              },
+              {
+                "id": "false",
+                "label": {
+                  "en": "Disable"
+                }
+              }
+            ]
           }
         ]
       },
@@ -97,6 +102,9 @@
           },
           {
             "name": "radio",
+            "title": {
+              "en": "Radio or buzzer?"
+            },
             "type": "dropdown",
             "values": [
               {
@@ -511,6 +519,52 @@
         ]
       },
       {
+        "id": "radio",
+        "title": {
+          "en": "Radio"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=lametric"
+          },
+          {
+            "name": "action",
+            "type": "dropdown",
+            "title": {
+              "en": "Action"
+            },
+            "values": [
+              {
+                "id": "radio.play",
+                "label": {
+                  "en": "Start playback"
+                }
+              },
+              {
+                "id": "radio.stop",
+                "label": {
+                  "en": "Stop playback"
+                }
+              },
+              {
+                "id": "radio.next",
+                "label": {
+                  "en": "Next radio station"
+                }
+              },
+              {
+                "id": "radio.prev",
+                "label": {
+                  "en": "Previous radio station"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
         "id": "set_brightness",
         "title": {
           "en": "Set brightness"
@@ -563,6 +617,158 @@
             }
           }
         ]
+      },
+      {
+        "id": "stopwatch",
+        "title": {
+          "en": "Stopwatch"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=lametric"
+          },
+          {
+            "name": "action",
+            "type": "dropdown",
+            "title": {
+              "en": "Action"
+            },
+            "values": [
+              {
+                "id": "stopwatch.start",
+                "label": {
+                  "en": "Start"
+                }
+              },
+              {
+                "id": "stopwatch.pause",
+                "label": {
+                  "en": "Pause"
+                }
+              },
+              {
+                "id": "stopwatch.reset",
+                "label": {
+                  "en": "Reset"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "timer",
+        "title": {
+          "en": "Timer"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=lametric"
+          },
+          {
+            "name": "action",
+            "type": "dropdown",
+            "title": {
+              "en": "Action"
+            },
+            "values": [
+              {
+                "id": "countdown.start",
+                "label": {
+                  "en": "Start"
+                }
+              },
+              {
+                "id": "countdown.pause",
+                "label": {
+                  "en": "Pause"
+                }
+              },
+              {
+                "id": "countdown.reset",
+                "label": {
+                  "en": "Reset"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "timer_set",
+        "title": {
+          "en": "Timer configuration"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=lametric"
+          },
+          {
+            "name": "dura",
+            "type": "number",
+            "min": 1,
+            "max": 100000,
+            "step": 1,
+            "placeholder": {
+              "en": "Duration in seconds"
+            }
+          },
+          {
+            "name": "start",
+            "type": "dropdown",
+            "title": {
+              "en": "Start now?"
+            },
+            "values": [
+              {
+                "id": "true",
+                "label": {
+                  "en": "Start now"
+                }
+              },
+              {
+                "id": "false",
+                "label": {
+                  "en": "Only set timer"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "weather",
+        "title": {
+          "en": "Weather"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=lametric"
+          },
+          {
+            "name": "action",
+            "type": "dropdown",
+            "title": {
+              "en": "Action"
+            },
+            "values": [
+              {
+                "id": "weather.forecast",
+                "label": {
+                  "en": "Forecast"
+                }
+              }
+            ]
+          }
+        ]
       }
     ]
   },
@@ -575,7 +781,7 @@
       },
       "id": "lametric",
       "name": {
-        "en": "Lametric Time"
+        "en": "LaMetric Time"
       },
       "class": "other",
       "capabilities": [

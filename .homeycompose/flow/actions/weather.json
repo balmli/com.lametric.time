@@ -1,7 +1,7 @@
 {
-  "id": "alarm_enable",
+  "id": "weather",
   "title": {
-    "en": "Enable / disable the alarm clock"
+    "en": "Weather"
   },
   "args": [
     {
@@ -10,19 +10,16 @@
       "filter": "driver_id=lametric"
     },
     {
-      "name": "enabled",
+      "name": "action",
       "type": "dropdown",
+      "title": {
+        "en": "Action"
+      },
       "values": [
         {
-          "id": "true",
+          "id": "weather.forecast",
           "label": {
-            "en": "Enable"
-          }
-        },
-        {
-          "id": "false",
-          "label": {
-            "en": "Disable"
+            "en": "Forecast"
           }
         }
       ]

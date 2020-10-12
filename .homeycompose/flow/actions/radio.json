@@ -1,0 +1,46 @@
+{
+  "id": "radio",
+  "title": {
+    "en": "Radio"
+  },
+  "args": [
+    {
+      "name": "device",
+      "type": "device",
+      "filter": "driver_id=lametric"
+    },
+    {
+      "name": "action",
+      "type": "dropdown",
+      "title": {
+        "en": "Action"
+      },
+      "values": [
+        {
+          "id": "radio.play",
+          "label": {
+            "en": "Start playback"
+          }
+        },
+        {
+          "id": "radio.stop",
+          "label": {
+            "en": "Stop playback"
+          }
+        },
+        {
+          "id": "radio.next",
+          "label": {
+            "en": "Next radio station"
+          }
+        },
+        {
+          "id": "radio.prev",
+          "label": {
+            "en": "Previous radio station"
+          }
+        }
+      ]
+    }
+  ]
+}

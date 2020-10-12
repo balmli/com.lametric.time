@@ -1,18 +1,12 @@
-# Lametric Time
+# Control your LaMetric Time
 
-App for Athom Homey to control your Lametric Time.
+With this app you can:
 
-#### Actions
-
-- Show widget
-- Set brightness (auto, 0-100%)
-- Show next / previous widget
-- Notification (text)
-- Notification (text and icon) 
-- Notification (text and sound) 
-- Notification (text, icon and sound) 
-- Clear the notification queue
-
+- Send notifications, with icon and sound
+- Activate a specific widget
+- Control the Alarm clock, Radio, Timer, Stopwatch and Weather apps
+- Set the volume
+- Set the brightness of the display
 
 
 ## Release Notes:

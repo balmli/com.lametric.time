@@ -1,0 +1,40 @@
+{
+  "id": "timer",
+  "title": {
+    "en": "Timer"
+  },
+  "args": [
+    {
+      "name": "device",
+      "type": "device",
+      "filter": "driver_id=lametric"
+    },
+    {
+      "name": "action",
+      "type": "dropdown",
+      "title": {
+        "en": "Action"
+      },
+      "values": [
+        {
+          "id": "countdown.start",
+          "label": {
+            "en": "Start"
+          }
+        },
+        {
+          "id": "countdown.pause",
+          "label": {
+            "en": "Pause"
+          }
+        },
+        {
+          "id": "countdown.reset",
+          "label": {
+            "en": "Reset"
+          }
+        }
+      ]
+    }
+  ]
+}

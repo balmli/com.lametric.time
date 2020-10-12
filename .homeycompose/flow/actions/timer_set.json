@@ -1,7 +1,7 @@
 {
-  "id": "alarm_set",
+  "id": "timer_set",
   "title": {
-    "en": "Set the alarm clock"
+    "en": "Timer configuration"
   },
   "args": [
     {
@@ -10,29 +10,32 @@
       "filter": "driver_id=lametric"
     },
     {
-      "name": "time",
-      "type": "time",
+      "name": "dura",
+      "type": "number",
+      "min": 1,
+      "max": 100000,
+      "step": 1,
       "placeholder": {
-        "en": "Time"
+        "en": "Duration in seconds"
       }
     },
     {
-      "name": "radio",
-      "title": {
-        "en": "Radio or buzzer?"
-      },
+      "name": "start",
       "type": "dropdown",
+      "title": {
+        "en": "Start now?"
+      },
       "values": [
         {
           "id": "true",
           "label": {
-            "en": "Radio"
+            "en": "Start now"
           }
         },
         {
           "id": "false",
           "label": {
-            "en": "Buzzer"
+            "en": "Only set timer"
           }
         }
       ]

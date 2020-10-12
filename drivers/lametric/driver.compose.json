@@ -2,7 +2,7 @@
 {
   "id": "lametric",
   "name": {
-    "en": "Lametric Time"
+    "en": "LaMetric Time"
   },
   "$extends": [
     "defaults"

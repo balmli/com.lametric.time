@@ -27,9 +27,13 @@ module.exports = class LametricTimeApp extends OAuth2App {
                 return results.filter(result => result.name.toLowerCase().includes(query.toLowerCase()));
             });
 
-        this.homey.flow.getActionCard('alarm_set').registerRunListener((args, state) => args.device.getClient().alarmSet(args.time, args.radio));
-        this.homey.flow.getActionCard('alarm_enable').registerRunListener((args, state) => args.device.getClient().alarmEnable());
-        this.homey.flow.getActionCard('alarm_disable').registerRunListener((args, state) => args.device.getClient().alarmDisable());
+        this.homey.flow.getActionCard('alarm_set').registerRunListener((args, state) => args.device.getClient().alarmSet(args.time, args.radio === 'true'));
+        this.homey.flow.getActionCard('alarm_enable').registerRunListener((args, state) => args.device.getClient().alarmEnable(args.enabled === 'true'));
+        this.homey.flow.getActionCard('radio').registerRunListener((args, state) => args.device.getClient().radio(args.action));
+        this.homey.flow.getActionCard('stopwatch').registerRunListener((args, state) => args.device.getClient().stopwatch(args.action));
+        this.homey.flow.getActionCard('timer_set').registerRunListener((args, state) => args.device.getClient().timerSet(args.dura, args.start === 'true'));
+        this.homey.flow.getActionCard('timer').registerRunListener((args, state) => args.device.getClient().timer(args.action));
+        this.homey.flow.getActionCard('weather').registerRunListener((args, state) => args.device.getClient().weather(args.action));
 
         this.homey.flow.getActionCard('notificationText')
             .registerRunListener((args, state) => args.device.getClient().sendNotification(args));
@@ -51,6 +55,6 @@ module.exports = class LametricTimeApp extends OAuth2App {
         this.homey.flow.getActionCard('next_widget').registerRunListener((args, state) => args.device.getClient().next());
         this.homey.flow.getActionCard('prev_widget').registerRunListener((args, state) => args.device.getClient().prev());
         this.homey.flow.getActionCard('set_brightness').registerRunListener((args, state) => args.device.getClient().updateDisplayState(args.brightness, 'manual'));
-        this.homey.flow.getActionCard('set_brightness_auto').registerRunListener((args, state) => args.device.getClient().updateDisplayState(100, 'auto'));
+        this.homey.flow.getActionCard('set_brightness_auto').registerRunListener((args, state) => args.device.getClient().updateDisplayState(undefined, 'auto'));
     }
 }
