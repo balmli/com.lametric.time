@@ -11,6 +11,6 @@ With this app you can:
 
 ## Release Notes:
 
-#### 0.9.0
+#### 0.9.1
 
 - First release

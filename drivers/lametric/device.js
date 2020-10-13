@@ -6,9 +6,20 @@ const LametricClient = require('../../lib/LametricClient');
 module.exports = class LametricDevice extends OAuth2Device {
 
     async onOAuth2Init() {
+        await this._migrate();
         this.registerCapabilityListener('volume_set', value => this.onSetVolume(value));
         await this._cacheIcons();
         this.addFetchTimeout(1);
+    }
+
+    async _migrate() {
+        try {
+            if (!this.hasCapability('volume_set')) {
+                await this.addCapability('volume_set');
+            }
+        } catch (err) {
+            this.log('Migration error', err);
+        }
     }
 
     async onDiscoveryResult(discoveryResult) {
@@ -100,6 +111,7 @@ module.exports = class LametricDevice extends OAuth2Device {
             return;
         }
         try {
+            this.clearFetchTimeout();
             const volumeState = await this.getClient().getAudioState();
             this._volumeState = volumeState;
             const range = volumeState.volume_range.max - volumeState.volume_range.min;
