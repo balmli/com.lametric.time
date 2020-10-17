@@ -22,28 +22,6 @@ module.exports = class LametricDevice extends OAuth2Device {
         }
     }
 
-    async onDiscoveryResult(discoveryResult) {
-        const drDeviceId = await this.getClient().getDeviceId(discoveryResult);
-        return drDeviceId === this.getData().id;
-    }
-
-    async onDiscoveryAvailable(discoveryResult) {
-        this.log('onDiscoveryAvailable', discoveryResult);
-        await this.updateDiscovery(discoveryResult);
-    }
-
-    async onDiscoveryAddressChanged(discoveryResult) {
-        this.log('onDiscoveryAddressChanged', discoveryResult);
-        await this.updateDiscovery(discoveryResult);
-    }
-
-    async updateDiscovery(discoveryResult) {
-        if (this.getSetting('ip_address') !== discoveryResult.address) {
-            await this.setSettings({ ip_address: discoveryResult.address }).catch(err => this.log('updateDiscovery failed', err));
-            delete this.lametricClient;
-        }
-    }
-
     async _cacheIcons() {
         try {
             let results = await this.oAuth2Client.getIcons();

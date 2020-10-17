@@ -11,6 +11,10 @@ With this app you can:
 
 ## Release Notes:
 
+#### 0.9.2
+
+- Removed SSDP discovery
+
 #### 0.9.1
 
 - First release

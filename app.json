@@ -1,6 +1,6 @@
 {
   "id": "com.lametric.time",
-  "version": "0.9.1",
+  "version": "0.9.2",
   "compatibility": ">=5.0.0",
   "sdk": 3,
   "brandColor": "#25b0f8",
@@ -785,7 +785,6 @@
       "capabilities": [
         "volume_set"
       ],
-      "discovery": "lametric_time",
       "pair": [
         {
           "id": "login_oauth2",
@@ -846,25 +845,5 @@
         }
       ]
     }
-  ],
-  "discovery": {
-    "lametric_time": {
-      "type": "ssdp",
-      "ssdp": {
-        "search": "urn:schemas-upnp-org:device:LaMetric:1"
-      },
-      "id": "{{headers.usn}}",
-      "conditions": [
-        [
-          {
-            "field": "headers.st",
-            "match": {
-              "type": "string",
-              "value": "urn:schemas-upnp-org:device:LaMetric:1"
-            }
-          }
-        ]
-      ]
-    }
-  }
+  ]
 }
