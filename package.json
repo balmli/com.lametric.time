@@ -18,7 +18,7 @@
   },
   "homepage": "https://github.com/balmli/com.lametric.time#readme",
   "dependencies": {
-    "homey-oauth2app": "^3.0.4",
+    "homey-oauth2app": "^3.0.5",
     "http.min": "^2.0.1"
   }
 }
