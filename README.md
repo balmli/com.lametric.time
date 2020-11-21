@@ -11,6 +11,10 @@ With this app you can:
 
 ## Release Notes:
 
+#### 1.1.0
+
+- Added flows to set clockface
+
 #### 1.0.0
 
 - Fixed Homey Community ID

@@ -29,6 +29,8 @@ module.exports = class LametricTimeApp extends OAuth2App {
 
         this.homey.flow.getActionCard('alarm_set').registerRunListener((args, state) => args.device.getClient().alarmSet(args.time, args.radio === 'true'));
         this.homey.flow.getActionCard('alarm_enable').registerRunListener((args, state) => args.device.getClient().alarmEnable(args.enabled === 'true'));
+        this.homey.flow.getActionCard('clock_face').registerRunListener((args, state) => args.device.getClient().clockFace(args.type));
+        this.homey.flow.getActionCard('clock_face_custom').registerRunListener((args, state) => args.device.getClient().clockFaceCustom(args.icon));
         this.homey.flow.getActionCard('radio').registerRunListener((args, state) => args.device.getClient().radio(args.action));
         this.homey.flow.getActionCard('stopwatch').registerRunListener((args, state) => args.device.getClient().stopwatch(args.action));
         this.homey.flow.getActionCard('timer_set').registerRunListener((args, state) => args.device.getClient().timerSet(args.dura, args.start === 'true'));

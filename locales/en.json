@@ -9,6 +9,8 @@
     "clear_notification_queue": "Unable to clear notifications (__statusCode__ __statusMessage__)",
     "update_display_state": "Unable to update display state (__statusCode__ __statusMessage__)",
     "get_volume_state": "Unable to get volume state (__statusCode__ __statusMessage__)",
-    "update_volume_state": "Unable to update volume (__statusCode__ __statusMessage__)"
+    "update_volume_state": "Unable to update volume (__statusCode__ __statusMessage__)",
+    "invalid_clock_face_type": "Invalid Clockface type",
+    "invalid_clock_face_icon": "Invalid Clockface icon. Must be in this format: 'data:image/png;base64,<base64 encoded png binary>' or 'data:image/gif;base64,<base64 encoded gif binary>'."
   }
 }
