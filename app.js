@@ -44,6 +44,9 @@ module.exports = class LametricTimeApp extends OAuth2App {
             .registerRunListener((args, state) => args.device.getClient().sendNotification(args))
             .registerArgumentAutocompleteListener('icon', async (query, args) => args.device.getIcons().filter(result => result.name.toLowerCase().includes(query.toLowerCase())));
 
+        this.homey.flow.getActionCard('notificationTextIconCode')
+            .registerRunListener((args, state) => args.device.getClient().sendNotification(args));
+
         this.homey.flow.getActionCard('notificationTextSound')
             .registerRunListener((args, state) => args.device.getClient().sendNotification(args))
             .registerArgumentAutocompleteListener('sound', async (query, args) => SOUNDS.filter(result => result.name.toLowerCase().includes(query.toLowerCase())));
@@ -51,6 +54,10 @@ module.exports = class LametricTimeApp extends OAuth2App {
         this.homey.flow.getActionCard('notificationTextIconSound')
             .registerRunListener((args, state) => args.device.getClient().sendNotification(args))
             .registerArgumentAutocompleteListener('icon', async (query, args) => args.device.getIcons().filter(result => result.name.toLowerCase().includes(query.toLowerCase())))
+            .registerArgumentAutocompleteListener('sound', async (query, args) => SOUNDS.filter(result => result.name.toLowerCase().includes(query.toLowerCase())));
+
+        this.homey.flow.getActionCard('notificationTextIconCodeSound')
+            .registerRunListener((args, state) => args.device.getClient().sendNotification(args))
             .registerArgumentAutocompleteListener('sound', async (query, args) => SOUNDS.filter(result => result.name.toLowerCase().includes(query.toLowerCase())));
 
         this.homey.flow.getActionCard('clear_notification_queue').registerRunListener((args, state) => args.device.getClient().clearNotifications());

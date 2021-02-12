@@ -27,7 +27,7 @@ module.exports = class LametricDevice extends OAuth2Device {
             let results = await this.oAuth2Client.getIcons();
             this._icons = results.data.map(icon => ({
                 image: icon.thumb.small,
-                name: icon.title + ' (' + icon.id + ')',
+                name: icon.title + ' (' + icon.code + ')',
                 code: icon.code
             }));
         } catch (err) {
