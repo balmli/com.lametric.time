@@ -28,6 +28,10 @@ or gif:
 
 ## Release Notes:
 
+#### 1.2.1
+
+- Trim spaces from icon code
+
 #### 1.2.0
 
 - Supporting 5000 of the most popular icons
