@@ -1,7 +1,7 @@
 {
   "_comment": "This file is generated. Please edit .homeycompose/app.json instead.",
   "id": "com.lametric.time",
-  "version": "1.2.1",
+  "version": "1.3.0",
   "compatibility": ">=5.0.0",
   "sdk": 3,
   "brandColor": "#25b0f8",
@@ -9,7 +9,7 @@
     "en": "LaMetric"
   },
   "description": {
-    "en": "Control your LaMetric Time"
+    "en": "Connected clock for a Smart Home"
   },
   "category": [
     "internet"
@@ -43,17 +43,16 @@
       }
     }
   },
-  "bugs": {
-    "url": "https://github.com/balmli/com.lametric.time/issues"
-  },
   "homeyCommunityTopicId": 36868,
-  "source": "https://github.com/balmli/com.lametric.time",
   "flow": {
     "actions": [
       {
         "id": "alarm_enable",
         "title": {
           "en": "Enable / disable the alarm clock"
+        },
+        "titleFormatted": {
+          "en": "[[enabled]] the alarm clock"
         },
         "args": [
           {
@@ -85,6 +84,9 @@
         "id": "alarm_set",
         "title": {
           "en": "Set the alarm clock"
+        },
+        "titleFormatted": {
+          "en": "Set the alarm clock [[time]] to [[radio]]"
         },
         "args": [
           {
@@ -123,6 +125,55 @@
         ]
       },
       {
+        "id": "change_device_mode",
+        "title": {
+          "en": "Change device mode"
+        },
+        "titleFormatted": {
+          "en": "Change device mode to [[mode]]"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=lametric"
+          },
+          {
+            "name": "mode",
+            "type": "dropdown",
+            "title": {
+              "en": "Mode"
+            },
+            "values": [
+              {
+                "id": "manual",
+                "label": {
+                  "en": "Manual"
+                }
+              },
+              {
+                "id": "auto",
+                "label": {
+                  "en": "Auto"
+                }
+              },
+              {
+                "id": "schedule",
+                "label": {
+                  "en": "Schedule"
+                }
+              },
+              {
+                "id": "kiosk",
+                "label": {
+                  "en": "Kiosk"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
         "id": "clear_notification_queue",
         "title": {
           "en": "Clear the notification queue"
@@ -138,7 +189,10 @@
       {
         "id": "clock_face",
         "title": {
-          "en": "Select the clock face"
+          "en": "Set the clock face"
+        },
+        "titleFormatted": {
+          "en": "Set the clock face to [[type]]"
         },
         "args": [
           {
@@ -180,6 +234,9 @@
         "title": {
           "en": "Set a custom clock face icon"
         },
+        "titleFormatted": {
+          "en": "Set a custom clock face icon to [[icon]]"
+        },
         "args": [
           {
             "name": "device",
@@ -215,6 +272,9 @@
         "id": "notificationText",
         "title": {
           "en": "Notification"
+        },
+        "titleFormatted": {
+          "en": "Notification [[priority]] [[icontype]] [[text]]"
         },
         "args": [
           {
@@ -289,6 +349,9 @@
         "id": "notificationTextIcon",
         "title": {
           "en": "Notification (icon)"
+        },
+        "titleFormatted": {
+          "en": "Notification [[priority]] [[icontype]] [[text]] [[icon]]"
         },
         "args": [
           {
@@ -374,6 +437,9 @@
         "title": {
           "en": "Notification (icon code)"
         },
+        "titleFormatted": {
+          "en": "Notification [[priority]] [[icontype]] [[text]] [[iconCode]]"
+        },
         "args": [
           {
             "name": "device",
@@ -457,6 +523,9 @@
         "id": "notificationTextIconCodeSound",
         "title": {
           "en": "Notification (icon code and sound)"
+        },
+        "titleFormatted": {
+          "en": "Notification [[priority]] [[icontype]] [[text]] [[iconCode]] [[sound]] [[repeat]]"
         },
         "args": [
           {
@@ -562,6 +631,9 @@
         "title": {
           "en": "Notification (icon and sound)"
         },
+        "titleFormatted": {
+          "en": "Notification [[priority]] [[icontype]] [[text]] [[icon]] [[sound]] [[repeat]]"
+        },
         "args": [
           {
             "name": "device",
@@ -665,6 +737,9 @@
         "id": "notificationTextSound",
         "title": {
           "en": "Notification (sound)"
+        },
+        "titleFormatted": {
+          "en": "Notification [[priority]] [[icontype]] [[text]] [[sound]] [[repeat]]"
         },
         "args": [
           {
@@ -773,6 +848,9 @@
         "title": {
           "en": "Radio"
         },
+        "titleFormatted": {
+          "en": "Radio [[action]]"
+        },
         "args": [
           {
             "name": "device",
@@ -819,6 +897,9 @@
         "title": {
           "en": "Set brightness"
         },
+        "titleFormatted": {
+          "en": "Set brightness to [[brightness]]"
+        },
         "args": [
           {
             "name": "device",
@@ -853,6 +934,9 @@
         "title": {
           "en": "Show widget"
         },
+        "titleFormatted": {
+          "en": "Show widget [[widget]]"
+        },
         "args": [
           {
             "name": "device",
@@ -872,6 +956,9 @@
         "id": "stopwatch",
         "title": {
           "en": "Stopwatch"
+        },
+        "titleFormatted": {
+          "en": "Stopwatch [[action]]"
         },
         "args": [
           {
@@ -913,6 +1000,9 @@
         "title": {
           "en": "Timer"
         },
+        "titleFormatted": {
+          "en": "Timer [[action]]"
+        },
         "args": [
           {
             "name": "device",
@@ -952,6 +1042,9 @@
         "id": "timer_set",
         "title": {
           "en": "Timer configuration"
+        },
+        "titleFormatted": {
+          "en": "Timer configuration [[dura]] [[start]]"
         },
         "args": [
           {
@@ -996,6 +1089,9 @@
         "id": "weather",
         "title": {
           "en": "Weather"
+        },
+        "titleFormatted": {
+          "en": "Weather [[action]]"
         },
         "args": [
           {

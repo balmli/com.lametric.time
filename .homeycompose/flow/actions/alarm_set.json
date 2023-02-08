@@ -3,6 +3,9 @@
   "title": {
     "en": "Set the alarm clock"
   },
+  "titleFormatted": {
+    "en": "Set the alarm clock [[time]] to [[radio]]"
+  },
   "args": [
     {
       "name": "device",

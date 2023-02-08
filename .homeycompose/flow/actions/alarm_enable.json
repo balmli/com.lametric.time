@@ -3,6 +3,9 @@
   "title": {
     "en": "Enable / disable the alarm clock"
   },
+  "titleFormatted": {
+    "en": "[[enabled]] the alarm clock"
+  },
   "args": [
     {
       "name": "device",

@@ -3,6 +3,9 @@
   "title": {
     "en": "Radio"
   },
+  "titleFormatted": {
+    "en": "Radio [[action]]"
+  },
   "args": [
     {
       "name": "device",

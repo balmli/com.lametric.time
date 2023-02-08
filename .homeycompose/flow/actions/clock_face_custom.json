@@ -3,6 +3,9 @@
   "title": {
     "en": "Set a custom clock face icon"
   },
+  "titleFormatted": {
+    "en": "Set a custom clock face icon to [[icon]]"
+  },
   "args": [
     {
       "name": "device",

@@ -3,6 +3,9 @@
   "title": {
     "en": "Weather"
   },
+  "titleFormatted": {
+    "en": "Weather [[action]]"
+  },
   "args": [
     {
       "name": "device",

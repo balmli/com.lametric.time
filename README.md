@@ -28,6 +28,10 @@ or gif:
 
 ## Release Notes:
 
+#### 1.3.0
+
+- Added 'Change device mode' action
+
 #### 1.2.1
 
 - Trim spaces from icon code

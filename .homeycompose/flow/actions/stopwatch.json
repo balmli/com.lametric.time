@@ -3,6 +3,9 @@
   "title": {
     "en": "Stopwatch"
   },
+  "titleFormatted": {
+    "en": "Stopwatch [[action]]"
+  },
   "args": [
     {
       "name": "device",

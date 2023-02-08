@@ -1,21 +1,14 @@
 {
   "name": "com.lametric.time",
-  "version": "1.2.1",
+  "version": "1.0.0",
   "description": "Lametric Time app for Athom Homey",
   "main": "app.js",
   "scripts": {
     "run": "homey app run",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/balmli/com.lametric.time.git"
-  },
   "author": "Bjørnar Almli",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/balmli/com.lametric.time/issues"
-  },
   "homepage": "https://github.com/balmli/com.lametric.time#readme",
   "dependencies": {
     "homey-oauth2app": "^3.0.7",

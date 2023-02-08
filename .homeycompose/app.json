@@ -1,6 +1,6 @@
 {
   "id": "com.lametric.time",
-  "version": "1.2.1",
+  "version": "1.3.0",
   "compatibility": ">=5.0.0",
   "sdk": 3,
   "brandColor": "#25b0f8",
@@ -8,7 +8,7 @@
     "en": "LaMetric"
   },
   "description": {
-    "en": "Control your LaMetric Time"
+    "en": "Connected clock for a Smart Home"
   },
   "category": [
     "internet"
@@ -42,9 +42,5 @@
       }
     }
   },
-  "bugs": {
-    "url": "https://github.com/balmli/com.lametric.time/issues"
-  },
-  "homeyCommunityTopicId": 36868,
-  "source": "https://github.com/balmli/com.lametric.time"
+  "homeyCommunityTopicId": 36868
 }

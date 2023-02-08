@@ -9,6 +9,7 @@ module.exports = class LametricDevice extends OAuth2Device {
         await this._migrate();
         this.registerCapabilityListener('volume_set', value => this.onSetVolume(value));
         await this._cacheIcons();
+        this.fetchDeviceState = true;
         this.addFetchTimeout(1);
     }
 
@@ -90,6 +91,11 @@ module.exports = class LametricDevice extends OAuth2Device {
         }
         try {
             this.clearFetchTimeout();
+            if (this.fetchDeviceState) {
+                const apiVersion = await this.getClient().apiVersion();
+                const deviceState = await this.getClient().deviceState();
+                this.fetchDeviceState = false;
+            }
             const volumeState = await this.getClient().getAudioState();
             this._volumeState = volumeState;
             const range = volumeState.volume_range.max - volumeState.volume_range.min;

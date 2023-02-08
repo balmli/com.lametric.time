@@ -3,6 +3,9 @@
   "title": {
     "en": "Show widget"
   },
+  "titleFormatted": {
+    "en": "Show widget [[widget]]"
+  },
   "args": [
     {
       "name": "device",

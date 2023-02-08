@@ -10,6 +10,9 @@
     "update_display_state": "Unable to update display state (__statusCode__ __statusMessage__)",
     "get_volume_state": "Unable to get volume state (__statusCode__ __statusMessage__)",
     "update_volume_state": "Unable to update volume (__statusCode__ __statusMessage__)",
+    "invalid_device_mode": "Invalid device mode",
+    "change_device_mode_api_version": "The device must be updated to support this action.",
+    "change_device_mode_failed": "Unable to change device mode (__statusCode__ __statusMessage__)",
     "invalid_clock_face_type": "Invalid Clockface type",
     "invalid_clock_face_icon": "Invalid Clockface icon. Must be in this format: 'data:image/png;base64,<base64 encoded png binary>' or 'data:image/gif;base64,<base64 encoded gif binary>'."
   }

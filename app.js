@@ -65,5 +65,6 @@ module.exports = class LametricTimeApp extends OAuth2App {
         this.homey.flow.getActionCard('prev_widget').registerRunListener((args, state) => args.device.getClient().prev());
         this.homey.flow.getActionCard('set_brightness').registerRunListener((args, state) => args.device.getClient().updateDisplayState(args.brightness, 'manual'));
         this.homey.flow.getActionCard('set_brightness_auto').registerRunListener((args, state) => args.device.getClient().updateDisplayState(undefined, 'auto'));
+        this.homey.flow.getActionCard('change_device_mode').registerRunListener((args, state) => args.device.getClient().changeDeviceMode(args.mode));
     }
 }

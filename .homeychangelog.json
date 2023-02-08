@@ -1,4 +1,7 @@
 {
+  "1.3.0": {
+    "en": "Added 'Change device mode' action. "
+  },
   "1.2.1": {
     "en": "Supporting 5000 of the most popular icons. Added two actions to specify your own icons. "
   },

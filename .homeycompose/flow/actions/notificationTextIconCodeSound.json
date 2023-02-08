@@ -3,6 +3,9 @@
   "title": {
     "en": "Notification (icon code and sound)"
   },
+  "titleFormatted": {
+    "en": "Notification [[priority]] [[icontype]] [[text]] [[iconCode]] [[sound]] [[repeat]]"
+  },
   "args": [
     {
       "name": "device",

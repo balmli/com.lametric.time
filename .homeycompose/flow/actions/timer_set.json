@@ -3,6 +3,9 @@
   "title": {
     "en": "Timer configuration"
   },
+  "titleFormatted": {
+    "en": "Timer configuration [[dura]] [[start]]"
+  },
   "args": [
     {
       "name": "device",

@@ -1,7 +1,10 @@
 {
   "id": "clock_face",
   "title": {
-    "en": "Select the clock face"
+    "en": "Set the clock face"
+  },
+  "titleFormatted": {
+    "en": "Set the clock face to [[type]]"
   },
   "args": [
     {

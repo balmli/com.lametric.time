@@ -3,6 +3,9 @@
   "title": {
     "en": "Set brightness"
   },
+  "titleFormatted": {
+    "en": "Set brightness to [[brightness]]"
+  },
   "args": [
     {
       "name": "device",

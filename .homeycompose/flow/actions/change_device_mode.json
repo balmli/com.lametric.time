@@ -1,10 +1,10 @@
 {
-  "id": "timer",
+  "id": "change_device_mode",
   "title": {
-    "en": "Timer"
+    "en": "Change device mode"
   },
   "titleFormatted": {
-    "en": "Timer [[action]]"
+    "en": "Change device mode to [[mode]]"
   },
   "args": [
     {
@@ -13,28 +13,34 @@
       "filter": "driver_id=lametric"
     },
     {
-      "name": "action",
+      "name": "mode",
       "type": "dropdown",
       "title": {
-        "en": "Action"
+        "en": "Mode"
       },
       "values": [
         {
-          "id": "countdown.start",
+          "id": "manual",
           "label": {
-            "en": "Start"
+            "en": "Manual"
           }
         },
         {
-          "id": "countdown.pause",
+          "id": "auto",
           "label": {
-            "en": "Pause"
+            "en": "Auto"
           }
         },
         {
-          "id": "countdown.reset",
+          "id": "schedule",
           "label": {
-            "en": "Reset"
+            "en": "Schedule"
+          }
+        },
+        {
+          "id": "kiosk",
+          "label": {
+            "en": "Kiosk"
           }
         }
       ]
