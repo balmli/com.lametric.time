@@ -28,6 +28,10 @@ or gif:
 
 ## Release Notes:
 
+#### 1.3.1
+
+- Added a flowcard to play MP3 files during notifications
+
 #### 1.3.0
 
 - Added 'Change device mode' action
