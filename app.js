@@ -50,6 +50,10 @@ module.exports = class LametricTimeApp extends OAuth2App {
         this.homey.flow.getActionCard('notificationTextSound')
             .registerRunListener((args, state) => args.device.getClient().sendNotification(args))
             .registerArgumentAutocompleteListener('sound', async (query, args) => SOUNDS.filter(result => result.name.toLowerCase().includes(query.toLowerCase())));
+        
+        this.homey.flow.getActionCard('notificationTextMp3Sound')
+            .registerRunListener((args, state) => args.device.getClient().sendNotification(args))
+            .registerArgumentAutocompleteListener('sound', async (query, args) => SOUNDS.filter(result => result.name.toLowerCase().includes(query.toLowerCase())));
 
         this.homey.flow.getActionCard('notificationTextIconSound')
             .registerRunListener((args, state) => args.device.getClient().sendNotification(args))

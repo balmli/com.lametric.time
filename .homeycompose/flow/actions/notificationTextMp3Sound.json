@@ -1,0 +1,104 @@
+{
+  "id": "notificationTextMp3Sound",
+  "title": {
+    "en": "Notification (mp3)"
+  },
+  "titleFormatted": {
+    "en": "Notification [[priority]] [[icontype]] [[text]] [[mp3]] [[sound]] [[repeat]]"
+  },
+  "args": [
+    {
+      "name": "device",
+      "type": "device",
+      "filter": "driver_id=lametric"
+    },
+    {
+      "name": "priority",
+      "title": {
+        "en": "Priority"
+      },
+      "type": "dropdown",
+      "values": [
+        {
+          "id": "info",
+          "label": {
+            "en": "Info"
+          }
+        },
+        {
+          "id": "warning",
+          "label": {
+            "en": "Warning"
+          }
+        },
+        {
+          "id": "critical",
+          "label": {
+            "en": "Critical"
+          }
+        }
+      ]
+    },
+    {
+      "name": "icontype",
+      "title": {
+        "en": "Icon type"
+      },
+      "type": "dropdown",
+      "values": [
+        {
+          "id": "none",
+          "label": {
+            "en": "None"
+          }
+        },
+        {
+          "id": "info",
+          "label": {
+            "en": "Info"
+          }
+        },
+        {
+          "id": "alert",
+          "label": {
+            "en": "Alert"
+          }
+        }
+      ]
+    },
+    {
+      "name": "text",
+      "type": "text",
+      "placeholder": {
+        "en": "Text"
+      }
+    },
+    {
+      "name": "mp3",
+      "type": "text",
+      "placeholder": {
+        "en": "MP3 url"
+      }
+    },
+    {
+      "name": "sound",
+      "title": {
+        "en": "Sound (fallback)"
+      },
+      "type": "autocomplete",
+      "placeholder": {
+        "en": "Sound (fallback)"
+      }
+    },
+    {
+      "name": "repeat",
+      "title": {
+        "en": "Repeat"
+      },
+      "type": "range",
+      "min": 1,
+      "max": 50,
+      "step": 1
+    }
+  ]
+}
